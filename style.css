@@ -1,0 +1,73 @@
+body{
+	font-family: 'Arial', sans-serif;
+	color: black;
+	background-color: oldlace;
+}
+
+header{
+	background-color: palegoldenrod;
+	padding: 10px 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;	
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	position: relative;
+	height: 80px;
+	border-radius: 10px;
+}
+
+button.menu-icon {
+	background-color: palegoldenrod;
+	color: black;
+	border: none;
+	padding: 10px 15px;
+	position: absolute;
+	left: 20px;
+	top: 15px;
+	cursor: pointer;
+	font-size: 30px;
+	border-radius: 10px;
+}
+div#menu {
+	display: contents;
+	width: 150px;
+	padding: 10px;
+	background-color: white;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	position: absolute;
+	left: 20px;
+	top: 60px;
+}
+
+h1.logo {
+	margin: 0;
+	font-size: 24px;
+	font-weight: bold;
+	position: absolute;
+	left: 100px;
+	top: 20px;
+}
+
+p.tagline {
+	margin: 0;
+	font-size: 14px;
+	position: absolute;
+	left: 100px;
+	top: 60px;
+}
+
+div.inside{	
+	margin: 10px;
+	padding: 10px;
+	border-radius: 10px;
+}
+footer {
+	background-color: palegoldenrod;
+	text-align: center;
+	padding: 10px 0;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
