@@ -2,6 +2,9 @@
 <html lang="zh-Hant">
 <head>
     <!--網頁ICON-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
     <link rel="icon" href="images/nhsh.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js"></script>
@@ -12,19 +15,27 @@
 </head>
 <body>
     <!--內文-->
-    <header>
+    <header class="header">
         <div class="container">
-            <button class="menu-icon" onclick="toggleMenu()">&#9776;</button>
-                <div id="menu" style="display:none;">
-                    <a href="index.html">首頁</a>
-                    <a href="menu.html">菜單</a>
-                    <a href="order.html">訂購</a>
-                    <a href="contact.html">聯絡我們</a>
-                </div>
-            <h1 class="logo" style="text-align: center;">內中熱食部</h1>
-            <p class="tagline" style="text-align: center;">歡迎來到內中熱食部訂購網站</p>
+            <h1 class="inner">內湖高中熱食部</h1>
+            <a href="html/login.html"><button class="menu-toggle">登入</button></a>
         </div>
+        <button class="menu" onclick="toggleMenu()">burger<br>
+            <a href="html/menu.html">每日菜單</a><br>
+            <a href="html/cart.html">線上訂單</a><br>
+            <a href="html/safety.html">安全聲明</a><br>
+            <a href="html/about.html">關於我們</a><br>
+            <a href="html/order.html">訂單監控</a><br>
+            <a href="html/members.html">製作人員</a><br>
+            <a href="html/onlinecash.html">儲值系統</a>
+        </button>
+        
     </header>
+    <div class="inner">
+        <h2>最新消息</h2>
+        <p>載入中......</p>
+        <!-- 使用firebase讀取並顯示資料 -->
+    </div>
 </body>
 </html>
 <footer>

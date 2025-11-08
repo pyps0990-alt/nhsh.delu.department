@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-    <link rel="icon" href="image/內中熱食部.ico" type="image/x-icon" />
     <!--網頁標籤-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,6 +24,17 @@
     </header>
 </body>
 </html>
+    <!--Javascript-->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+    </script>
     <main>
         <h2>歡迎來到內中熱食部訂購網站</h2>
         <p>這裡是內中熱食部的首頁，您可以在這裡找到最新的菜單和訂購資訊。</p>
