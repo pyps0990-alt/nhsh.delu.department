@@ -1,4 +1,160 @@
+:root {
+	--bg:#DFF6E0;
+	--textmain:#2C5F2D;
+	--text:black;
+	--btn:#f9d342;
+}
+.hero{
+	background-color: var(--bg);
+	font-family: 'l', sans-serif;
+	padding: 20px;
+	text-align: center;
+}
+
+.card{
+	background-color: var(--bg);
+	font-family: 'l', sans-serif;
+	padding: 20px;
+	text-align: left;
+	margin: 10px 0px;
+	padding: 40px;
+	border-radius: 12px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+	position: flex;
+}
+
 body{
-	background-color: peachpuff;
-	font-family: 'LXGW WenKai Mono TC', sans-serif;
+	background-color: var(--bg);
+	font-family: 'l', sans-serif;
+}
+
+h1{
+	color: var(--textmain);
+	text-align: center;
+}
+
+.product{
+	background-color: var(--bg);
+	font-family: 'l', sans-serif;
+	padding: 20px;
+	text-align: center;
+	margin: 10px 0px;
+	padding: 40px;
+	border-radius: 12px;
+}
+
+.block{
+	background-color: var(--bg);
+	font-family: 'l', sans-serif;
+	padding: 20px;
+	text-align: center;
+	margin: 10px 0px;
+	padding: 40px;
+	border-radius: 12px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+.loader{
+	background-color: var(--bg);
+	font-family: 'l', sans-serif;
+	padding: 20px;
+	text-align: left;
+	margin: 10px 0px;
+	padding: 40px;
+	border-radius: 12px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn1{
+	background-color: var(--btn);
+	color: var(--text);
+	border: none;
+	padding: 10px 20px;
+	border-radius: 8px;
+	max-height: 40px;
+	text-align: center;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	position: absolute;
+	top: 20px;
+	right: 90px;
+}
+
+.btn2{
+	background-color: var(--btn);
+	color: var(--text);
+	border: none;
+	padding: 10px 20px;
+	border-radius: 8px;
+	max-height: 40px;
+	text-align: center;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+
+.btn3{
+	background-color: var(--btn);
+	color: var(--text);
+	border: none;
+	padding: 10px 20px;
+	border-radius: 8px;
+	max-height: 40px;
+	text-align: center;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	margin-top: 20px;
+	text-align: center;
+}
+
+.btn1:hover, .btn2:hover, .btn3:hover{
+	background-color: var(--textmain);
+	color: white;
+}
+
+.text:hover{
+	color: var(--textmain);
+	background-color: var(--btn);
+	max-width: max-content;
+}
+
+#list{
+	width: 115px;
+	padding: 10px;
+	background-color: var(--Button);
+	border-radius: 12px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+	transform-origin: top center;
+	position: absolute;
+	top: 60px;
+	right: 20px;
+	text-align: center;
+	max-width: max-content;
+	animation: fadeInScale 0.3s ease forwards;
+	transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#list.show{
+	transform: scale(1);
+	opacity: 1;
+	pointer-events: auto;
+}
+
+#list.hidden{
+	pointer-events: none;
+	transform: scale(0.5);
+	opacity: 0;
+}
+
+footer{
+	background-color: var(--bg);
+	padding: 20px;
+	margin-top: 20px;
+	color:black;
+	position: relative;
+	bottom: 0;
+	width: auto;
 }

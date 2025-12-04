@@ -4,25 +4,86 @@
     <!--網頁標籤-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
     <title>內中熱食部網站首頁</title>
 </head>
 <body>
-    <button class="menu" onclick="toggleMenu()">burger<br>
-            <a href="../index.html">首頁</a><br>
-            <a href="menu.html">每日菜單</a><br>
-            <a href="cart.html">線上訂單</a><br>
-            <a href="safety.html">安全聲明</a><br>
-            <a href="about.html">關於我們</a><br>
-            <a href="order.html">訂單監控</a><br>
-            <a href="members.html">製作人員</a><br>
-            <a href="onlinecash.html">儲值系統</a>
-        </button>
-    <h1>熱食部菜單</h1>
-    <ul>
-        <li>炒飯</li>
-        <li>麵條</li>
-        <li>湯品</li>
-        <li>小吃</li>
-    </ul>
+    <header class="header">
+        <div class="container">
+            <h1 class="inner">內湖高中熱食部</h1>
+            <a href="html/login.html"><button class="btn1">登入</button></a>
+        </div>
+        <button id="toggleBtn" class="btn2">選單</button>
+        <div id="list" class="list">
+            <a href="../index.html" class="text" style="text-decoration: none;color: var(--Button-text);">首頁</a><br>
+            <a href="html/cart.html" class="text" style="text-decoration: none;color: var(--Button-text);">線上訂單</a><br>
+            <a href="html/about.html" class="text" style="text-decoration: none;color: var(--Button-text);">關於我們</a><br>
+            <a href="html/onlinecash.html" class="text" style="text-decoration: none;color: var(--Button-text);">儲值系統</a>
+        </div>
+    </header>
+    <div class="product">
+        <div class="block">
+            <h2>早餐</h2>
+            <p>提供多種美味早餐選擇，讓您一天活力滿滿！</p>
+            <div class="card">
+                <img src="../images/breakfast1.jpg" alt="早餐1">
+                <h3>三明治</h3>
+                <p>新鮮出爐的三明治，內含火腿、蛋和生菜。</p>
+                <p>價格: NT$50</p>
+                <button class="btn3">加入購物車</button>
+            </div>
+            <div class="card">
+                <img src="../images/breakfast2.jpg" alt="早餐2">
+                <h3>蛋餅</h3>
+                <p>傳統台式蛋餅，外酥內軟，搭配特製醬料。</p>
+                <p>價格: NT$40</p>
+                <button class="btn3">加入購物車</button>
+            </div>
+
+        </div>
+        <div class="block">
+            <h2>午餐</h2>
+            <p>豐富多樣的午餐菜單，滿足您的味蕾需求！</p>
+            <div class="card">
+                <img src="../images/lunch1.jpg" alt="午餐1">
+                <h3>便當</h3>
+                <p>營養均衡的便當，包含主菜、配菜和湯品。</p>
+                <p>價格: NT$80</p>
+                <button class="btn3">加入購物車</button>
+            </div>
+            <div class="card">
+                <img src="../images/lunch2.jpg" alt="午餐2">
+                <h3>炒飯</h3>
+                <p>香氣四溢的炒飯，搭配新鮮蔬菜和蛋。</p>
+                <p>價格: NT$70</p>
+                <button class="btn3">加入購物車</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
+<footer>
+    <p>地址: 台北市內湖區內湖路一段200號</p>
+    <p>電話: (02)2792-3311轉1234</p>
+    <p>營業時間:週一到週五早上7:00~15:00</p>
+    <p>版權所有 &copy; 2024 內湖高中熱食部</p>
+</footer>
+<script>
+    const btn = document.getElementById('toggleBtn');
+    const list = document.getElementById('list');
+
+    list.classList.add('hidden');
+
+    let isOpen = false;
+
+    btn.addEventListener('click', () => {
+        if(isOpen){
+            list.classList.remove('show');
+            list .classList.add('hidden');
+        }else{
+            list.classList.remove('hidden');
+            list.classList.add('show');
+        }
+        isOpen = !isOpen;
+    });
+</script>

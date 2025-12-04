@@ -2,36 +2,37 @@
 <html lang="zh-Hant">
 <head>
     <!--網頁ICON-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
-    <link rel="icon" href="images/nhsh.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/main.js"></script>
+    <link rel="icon" href="./images/nhsh.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <script type="module" src="js/main.js"></script>
     <!--網頁標籤-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 字體導入 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chocolate+Classical+Sans&display=swap" rel="stylesheet">
     <title>內中熱食部首頁</title>
+    <script src="js/main.js"></script>
 </head>
 <body>
     <!--內文-->
-    <header class="header">
+    <header class="hero">
         <div class="container">
             <h1 class="inner">內湖高中熱食部</h1>
-            <a href="html/login.html"><button class="menu-toggle">登入</button></a>
+            <p>便宜好食物，歡迎訂購！</p>
+            <a href="html/login.html"><button class="btn1">登入</button></a>
+            <a href="html/menu.html"><button class="btn3">開始點餐</button></a>
         </div>
-        <button class="menu" onclick="toggleMenu()">burger<br>
-            <a href="html/menu.html">每日菜單</a><br>
-            <a href="html/cart.html">線上訂單</a><br>
-            <a href="html/safety.html">安全聲明</a><br>
-            <a href="html/about.html">關於我們</a><br>
-            <a href="html/order.html">訂單監控</a><br>
-            <a href="html/members.html">製作人員</a><br>
-            <a href="html/onlinecash.html">儲值系統</a>
-        </button>
-        
+        <button id="toggleBtn" class="btn2">選單</button>
+        <div id="list" class="list">
+            <a href="html/cart.html" class="text" style="text-decoration: none;color: var(--Button-text);">線上訂單</a><br>
+            <a href="html/about.html" class="text" style="text-decoration: none;color: var(--Button-text);">關於我們</a><br>
+            <!-- <a href="html/order.html" class="text" style="text-decoration: none;color: var(--Button-text);">訂單監控</a><br> -->
+            <a href="html/onlinecash.html" class="text" style="text-decoration: none;color: var(--Button-text);">儲值系統</a>
+        </div>
     </header>
-    <div class="inner">
+    <div class="loader">
         <h2>最新消息</h2>
         <p>載入中......</p>
         <!-- 使用firebase讀取並顯示資料 -->
@@ -39,7 +40,28 @@
 </body>
 </html>
 <footer>
-    <h2>歡迎來到內中熱食部訂購網站</h2>
-    <p>這裡是內中熱食部的首頁，您可以在這裡找到最新的菜單和訂購資訊。</p>
-    <p>&copy; 2026 內中熱食部</p>
+    <p>地址: 台北市內湖區內湖路一段200號</p>
+    <p>電話: (02)2792-3311轉1234</p>
+    <p>營業時間:週一到週五早上7:00~15:00</p>
+    <p>版權所有 &copy; 2024 內湖高中熱食部</p>
 </footer>
+<script>
+    const btn = document.getElementById('toggleBtn');
+    const list = document.getElementById('list');
+
+    list.classList.add('hidden');
+
+    let isOpen = false;
+
+    btn.addEventListener('click', () => {
+        if(isOpen){
+            list.classList.remove('show');
+            list .classList.add('hidden');
+        }else{
+            list.classList.remove('hidden');
+            list.classList.add('show');
+        }
+        isOpen = !isOpen;
+    });
+</script>
+

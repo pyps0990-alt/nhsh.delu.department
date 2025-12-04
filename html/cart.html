@@ -4,30 +4,44 @@
     <!--網頁標籤-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
     <title>訂餐系統</title>
 </head>
 <body>
-    <h1>熱食部訂餐系統</h1>
-    <form>
-        <label for="name">姓名：</label>
-        <input type="text" id="name" name="name" required>
-        <label for="name">班級：</label>
-        <input type="text" id="class" name="class" required>
-        <label for="name">座號：</label>
-        <input type="text" id="number" name="number" required>
-        <br><br>
-        <label for="item">餐點選擇：</label>
-        <select id="item" name="item" required>
-            <option value="">請選擇</option>
-            <option value="rice">白飯 10元</option>
-            <option value="noodle">麵條</option>
-            <option value="soup">湯品</option>
-        </select>
-        <br><br>
-        <label for="quantity">數量：</label>
-        <input type="number" id="quantity" name="quantity" min="1" value="1" required>
-        <br><br>
-        <button type="submit">送出訂單</button>
-    </form>
+    <div class="hreo">
+        <div class="container">
+            <h1 class="inner">內湖高中熱食部</h1>
+            <p>便宜好食物，歡迎訂購！</p>
+    </div>
+    <button id="toggleBtn" class="btn2">選單</button>
+    <div id="list" class="list">
+        <a href="../index.html" class="text" style="text-decoration: none;color: var(--Button-text);">首頁</a><br>
+        <a href="html/about.html" class="text" style="text-decoration: none;color: var(--Button-text);">關於我們</a><br>
+        <a href="html/order.html" class="text" style="text-decoration: none;color: var(--Button-text);">訂單監控</a><br>
+        <a href="html/onlinecash.html" class="text" style="text-decoration: none;color: var(--Button-text);">儲值系統</a>
+    </div>
+
+    <div class="container">
+        <p>以下是訂購系統</p>
+    </div>
 </body>
-</html>     
+</html>
+<script>
+    const btn = document.getElementById('toggleBtn');
+    const list = document.getElementById('list');
+
+    list.classList.add('hidden');
+
+    let isOpen = false;
+
+    btn.addEventListener('click', () => {
+        if(isOpen){
+            list.classList.remove('show');
+            list .classList.add('hidden');
+        }else{
+            list.classList.remove('hidden');
+            list.classList.add('show');
+        }
+        isOpen = !isOpen;
+    });
+</script>     

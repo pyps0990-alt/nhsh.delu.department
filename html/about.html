@@ -3,27 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Document</title>
 </head>
 <body>
     <header class="header">
-        <div class="container.outer">
+        <div class="container">
             <h1 class="inner">內湖高中熱食部</h1>
-            <a href="html/login.html"><button class="menu-toggle">登入</button></a>
+            <a href="login.html"><button class="btn1">登入</button></a>
         </div>
-        <button class="menu" onclick="toggleMenu()">burger<br>
-            <a href="../index.html">首頁</a><br>
-            <a href="menu.html">每日菜單</a><br>
-            <a href="cart.html">線上訂單</a><br>
-            <a href="safety.html">安全聲明</a><br>
-            <a href="about.html">關於我們</a><br>
-            <a href="order.html">訂單監控</a><br>
-            <a href="members.html">製作人員</a><br>
-            <a href="onlinecash.html">儲值系統</a>
-        </button>
+        <button id="toggleBtn" class="btn2">選單</button>
+        <div id="list" class="list">
+            <a href="./index.html" class="text" style="text-decoration: none;color: var(--Button-text);">首頁</a><br>
+            <a href="menu.html" class="text" style="text-decoration: none;color: var(--Button-text);">每日菜單</a><br>
+            <a href="cart.html" class="text" style="text-decoration: none;color: var(--Button-text);">線上訂單</a><br>
+            <a href="safety.html" class="text" style="text-decoration: none;color: var(--Button-text);">安全聲明</a><br>
+            <a href="order.html" class="text" style="text-decoration: none;color: var(--Button-text);">訂單監控</a><br>
+            <a href="members.html" class="text" style="text-decoration: none;color: var(--Button-text);">製作人員</a><br>
+            <a href="onlinecash.html" class="text" style="text-decoration: none;color: var(--Button-text);">儲值系統</a>
+        </div>
+    </header>
     <div class="container.inner ">
         <h1>關於我們</h1>
         <p>此網站的設計目的，是為了讓各位能夠在午餐前預定午餐，不至於發生熱食部排不到隊的情況，讓每位內中人都能夠享受午餐的美好時光。</p>
+        <p>This website is designed to let everyone pre-order lunch before lunchtime, preventing situations where people can't get into the cafeteria line, and ensuring that everyone at our school can enjoy a pleasant lunch.</p>
     </div>
 </body>
 </html>
+
+<script>
+    const btn = document.getElementById('toggleBtn');
+    const list = document.getElementById('list');
+
+    list.classList.add('hidden');
+
+    let isOpen = false;
+
+    btn.addEventListener('click', () => {
+        if(isOpen){
+            list.classList.remove('show');
+            list .classList.add('hidden');
+        }else{
+            list.classList.remove('hidden');
+            list.classList.add('show');
+        }
+        isOpen = !isOpen;
+    });
+</script>
